@@ -9,7 +9,9 @@
     ],
     "dependencies": {
         "device": "*",
-        "arcade-carnival": "github:microsoft/arcade-carnival#v0.0.3"
+        "arcade-carnival": "github:microsoft/arcade-carnival#v0.0.3",
+        "carnival": "github:microsoft/arcade-carnival#v0.0.7"
+        
     },
     "testDependencies": {}
 }
