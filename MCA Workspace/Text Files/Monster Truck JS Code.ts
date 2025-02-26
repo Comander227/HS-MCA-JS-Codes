@@ -23,7 +23,8 @@ truck.vx = 100;
 scene.cameraFollowSprite(truck);
 
 //Establishing Animation for Truck
-animation.runImageAnimation(truck, assets.animation`truck3 animated`, 100, true);
+//Check the assets and pick your truck by replacing # in `truck# animation`!!!
+animation.runImageAnimation(truck, assets.animation`truck# animated`, 100, true);
     
 
 //Jump Controls on "A" Pressed
