@@ -1,0 +1,15 @@
+{
+    "name": "Blank Test Project",
+    "version": "0.0.0",
+    "files": [
+        "main.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "dependencies": {
+        "device": "*",
+        "arcade-carnival": "github:microsoft/arcade-carnival#v0.0.3"
+    },
+    "testDependencies": {}
+}
