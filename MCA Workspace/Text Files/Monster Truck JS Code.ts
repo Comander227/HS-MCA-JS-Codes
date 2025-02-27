@@ -43,6 +43,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`empty cave`, function (sprite
     game.over(true);
 });
 
+
+
+
 //Lose Game Condition of hitting spikes
 scene.onOverlapTile(SpriteKind.Player, assets.tile`spikes`, function (sprite, location) {
     game.over(false);

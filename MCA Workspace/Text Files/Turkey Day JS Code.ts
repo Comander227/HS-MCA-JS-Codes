@@ -39,6 +39,13 @@ namespace SpriteKind {
 }
 
 
+
+
+
+
+
+
+
 //Step 14
 scene.onOverlapTile(SpriteKind.Player, assets.tile`cage`, function (sprite, location) {
     //Step 15
