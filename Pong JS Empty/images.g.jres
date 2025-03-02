@@ -1,0 +1,22 @@
+{
+    "image1": {
+        "data": "hwQEABAAAAAREREREREREREREREREREREREREREREREREREREREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Player 1"
+    },
+    "image2": {
+        "data": "hwQEAAQAAAAREQAAEREAABERAAAREQAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Ball"
+    },
+    "image3": {
+        "data": "hwQEABAAAAAREREREREREREREREREREREREREREREREREREREREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Player 2"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
