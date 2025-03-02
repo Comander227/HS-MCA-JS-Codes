@@ -12,6 +12,8 @@ let Background = image.create(scene.screenWidth(), scene.screenHeight());
 //This for loop is used to set specific pixals within the a different color within the background image. 
 for (let index = 0; index <= scene.screenHeight(); index++) {
     if (index % 6 < 4) {
+        /*Background.setPixel is a FUN-ction when it comes to modifying things on the screen or manipulating images
+          Feel free to modify the final parameter which sets the color of your net*/
         Background.setPixel(scene.screenWidth() / 2, index, 1);
     };
 };
@@ -19,11 +21,24 @@ for (let index = 0; index <= scene.screenHeight(); index++) {
 //This code sets the created image as our background. 
 scene.setBackgroundImage(Background);
 
+/* Statement about Asset Modification and Expectations
+    This project provides preset assets based on the original concept of Pong. 
+    Back in 1972 it was simplar and cheaper to use black and white
+    Nowadays there are at least 16 colors we can use. (pause for laughter)
+    So feel free to change the colors by manipulating either the asset editor or manipulating the code. 
+    However, a core element of this game is fairness between the player sprites and the limited pixals used to create the sprite.
+    If you are going to modify the player sprites, as a requirement of the project, I am insisting that they are fair.
+    This means each player sprite must be the same size and have the same pixal dimensions. 
+    Within those requirements, have fun. 
+*/
+
 //Creating the player sprite using the assets preloaded into this project
 let Player1 = sprites.create(assets.image`Player 1`, SpriteKind.Player);
 
 //Setting the Player 1 position to the (left/right) side of the screen. 
 Player1.setPosition(8, 60);
+
+
 
 //Assigning Player 1 controller set to the Player 1
 //Which movement value is the set value for the Player 1 Sprite
@@ -65,8 +80,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     //Play defined sound effect to add emphisis on interaction
     music.playTone(494, music.beat(BeatFraction.Half));
 });
-
-
 // CPU Player Algorithm 
 //Game.onUpate function used to update the game every frame. 
 game.onUpdate(function () {
@@ -83,12 +96,6 @@ game.onUpdate(function () {
         }
     }
 });
-
-
-
-
-
-
 //Core gameplay code for scoring mechanics. 
 game.onUpdate(function () {
     
