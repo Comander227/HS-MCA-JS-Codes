@@ -30,6 +30,7 @@ animation.runImageAnimation(truck, assets.animation`truck# animated`, 100, true)
 //Jump Controls on "A" Pressed
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     truck.vy = -200
+    //Extra music effect to embelish player action
     music.play(music.melodyPlayable(music.knock), music.PlaybackMode.InBackground)
 });
 
@@ -42,9 +43,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function (){
 scene.onOverlapTile(SpriteKind.Player, assets.tile`empty cave`, function (sprite, location) {
     game.over(true);
 });
-
-
-
 
 //Lose Game Condition of hitting spikes
 scene.onOverlapTile(SpriteKind.Player, assets.tile`spikes`, function (sprite, location) {

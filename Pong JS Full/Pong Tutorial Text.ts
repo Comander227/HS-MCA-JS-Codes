@@ -1,18 +1,12 @@
-
-
-/*
-Directions: Complete the following project by entering in the code within the guide.
-Remeber to fill the blanks in the comments to earn full credit.
-*/
+/*Directions: Complete the following project by entering in the code within the guide.
+Remeber to fill the blanks in the comments to earn full credit.*/
 
 // Establishing a variable for players_connected allows us to manipulate the game between _____-_____ and mutliplayer. 
 let players_connected = 1;
 
 //Creating a background image as the court allows the player to see the visual split in the screen.
-/*
-Using scene.___________ and scene.__________ as the _________ of the image.create function means the coder does not need to refer to the specific size of 
-the screen in order to create an image that covers the screen.
-*/
+/*Using scene.___________ and scene.__________ as the _________ of the image.create function means the coder does not need to refer to the specific size of 
+the screen in order to create an image that covers the screen.*/
 let Background = image.create(scene.screenWidth(), scene.screenHeight());
 
 //This for loop is used to set specific pixals within the a different color within the background image. 
@@ -45,7 +39,6 @@ Player2.setPosition(152, 60);
 //Locking Player 2 Sprite on screen
 Player2.setStayInScreen(true);
 
-
 //Creating Ball as projectile Spritekind and assigning it gated random values for the vx and vy properties. 
 let ball = sprites.createProjectileFromSprite(assets.image`Ball`, Player1, randint(50, 75), randint(25, 50));
 
@@ -62,12 +55,9 @@ ball.setFlag(SpriteFlag.ShowPhysics, false);
 info.player1.setScore(0);
 info.player2.setScore(0);
 
-
-
 //Creating the core mechanic for the player to interact with the ball
 //Establishment of Overlap Code using the SpriteKinds of __________ and ___________ 
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
-    
     //Using a (negative/positive) value to invert the (x/y) axis
     otherSprite.vx = -1.1 * otherSprite.vx;
     //Slight adjustment for the balls vertical movement. 
@@ -93,6 +83,10 @@ game.onUpdate(function () {
         }
     }
 });
+
+
+
+
 
 
 //Core gameplay code for scoring mechanics. 
@@ -125,7 +119,6 @@ game.onUpdate(function () {
 //With that in mind, we need to establish the ability for another player to join the game if they want to.
 //We can establish this ability through creating conditions based on the possible Player 2 inputs.
 //MakeCode Arcade has a built-in Player 2 controller set using the keys [I,J,K,L,U,O]
-
 //If the ____ button on the Player 2 controller set is pressed then
 controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
     //Adjust the players_connected variable
@@ -139,10 +132,5 @@ controller.player2.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pres
     players_connected = 2;
     //Set the player two controller set to the Player2 sprite
     //Set the VX value to ___ locking the (horizontal/vertical) movement
-    controller.player2.moveSprite(Player2, 0, 100)
-})
-
-
-
-
-
+    controller.player2.moveSprite(Player2, 0, 100);
+});
