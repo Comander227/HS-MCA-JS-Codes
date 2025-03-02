@@ -127,14 +127,14 @@ game.onUpdate(function () {
 //MakeCode Arcade has a built-in Player 2 controller set using the keys [I,J,K,L,U,O]
 
 //If the ____ button on the Player 2 controller set is pressed then
-controller.player2.onButtonEvent(ControllerButton.down, ControllerButtonEvent.Pressed, function () {
+controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
     //Adjust the players_connected variable
     players_connected = 2;
     //Set the player two controller set to the Player2 sprite
     //Set the VX value to ___ locking the (horizontal/vertical) movement
     controller.player2.moveSprite(Player2, 0, 100);
 });
-controller.player2.onButtonEvent(ControllerButton.up, ControllerButtonEvent.Pressed, function () {
+controller.player2.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pressed, function () {
     //Adjust the players_connected variable
     players_connected = 2;
     //Set the player two controller set to the Player2 sprite
